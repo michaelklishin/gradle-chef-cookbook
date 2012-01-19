@@ -15,6 +15,12 @@ Feel free to redistribute, use in commercial projects and modify to your needse.
 Main recipe is `gradle::tarball`.
 
 
+## Supported OSes
+
+Debian and Ubuntu (any version that was released in the last 1-2 years and provides Groovy package
+should work fine).
+
+
 ## Dependencies
 
 OpenJDK 6 or Sun JDK 6.
