@@ -18,7 +18,7 @@ Main recipe is `gradle::tarball`.
 ## Attributes
 
 * `[:gradle][:version]` (default: 1.0): Gradle version to install
-* `[:gradle][:installation_dir]` (default: /usr/local/gradle): directory to install Gradle to
+* `[:gradle][:installation_dir]` (default: `/usr/local/gradle`): directory to install Gradle to
 
 
 ## Supported OSes
