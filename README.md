@@ -17,7 +17,7 @@ Main recipe is `gradle::tarball`.
 
 ## Attributes
 
-* `[:gradle][:version]` (default: 1.0-rc2): Gradle version to install
+* `[:gradle][:version]` (default: 1.0): Gradle version to install
 * `[:gradle][:installation_dir]` (default: /usr/local/gradle): directory to install Gradle to
 
 
@@ -29,7 +29,7 @@ should work fine).
 
 ## Dependencies
 
-OpenJDK 6 or Sun JDK 6.
+Tested and used OpenJDK 7, Oracle JDK 7, OpenJDK 6 and Sun JDK.
 
 
 ## Copyright & License
