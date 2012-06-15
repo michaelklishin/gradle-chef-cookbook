@@ -29,7 +29,7 @@ should work fine).
 
 ## Dependencies
 
-Tested and used OpenJDK 7, Oracle JDK 7, OpenJDK 6 and Sun JDK.
+Tested and used with OpenJDK 7, Oracle JDK 7, OpenJDK 6 and Sun JDK.
 
 
 ## Copyright & License
