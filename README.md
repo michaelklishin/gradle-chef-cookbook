@@ -2,7 +2,7 @@
 
 This is an OpsCode Chef cookbook for Gradle, a modern build tool.
 
-It uses officially released tarballs from gradle.org to install Gradle under `/usr/local/gradle`,
+It uses official releases from gradle.org to install Gradle under `/usr/local/gradle`,
 provides an `/etc/profile.d` script that prepends Gradle's `bin` directory to the `$PATH`
 and allows you to tweak version using Chef node attributes.
 
@@ -17,8 +17,8 @@ Main recipe is `gradle::tarball`.
 
 ## Attributes
 
-* `[:gradle][:version]` (default: 1.1): Gradle version to install
-* `[:gradle][:installation_dir]` (default: `/usr/local/gradle`): directory to install Gradle to
+* `[:gradle][:version]` (default: 1.3): Gradle version to install
+* `[:gradle][:home_dir]` (default: `/usr/local/gradle`): directory to install Gradle to
 
 
 ## Supported OSes
