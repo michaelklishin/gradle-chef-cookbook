@@ -1,9 +1,3 @@
-gradle_version = "1.1"
-
-default[:gradle] = {
-  :version          => gradle_version,
-  :installation_dir => "/usr/local/gradle",
-  :tarball => {
-    :url => "http://services.gradle.org/distributions/gradle-#{gradle_version}-bin.zip"
-  }
-}
+default[:gradle][:version] = "1.1"
+default[:gradle][:installation_dir] = "/usr/local/gradle"
+default[:gradle][:release_url]       = "http://services.gradle.org/distributions/gradle-:version:-bin.zip"
