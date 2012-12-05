@@ -12,7 +12,7 @@ Feel free to redistribute, use in commercial projects and modify to fit your nee
 
 ## Recipes
 
-Main recipe is `gradle`.
+Main recipe is `gradle::tarball`.
 
 
 ## Attributes

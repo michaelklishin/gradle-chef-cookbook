@@ -1,7 +1,7 @@
 #
 # Author:: Denis Karpenko (<denis@karpenko.me>)
 # Cookbook Name:: gradle
-# Recipe:: install_from_release
+# Recipe:: tarball
 #
 # Copyright 2012, Denis Karpenko.
 #
