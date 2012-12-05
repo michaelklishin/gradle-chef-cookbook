@@ -22,7 +22,7 @@ include_recipe 'install_from'
 
 install_from_release(:gradle) do
   release_url   node[:gradle][:release_url]
-  home_dir      node[:gradle][:installation_dir]
+  home_dir      node[:gradle][:home_dir]
   version       node[:gradle][:version]
   action        [:install]
   has_binaries  [ 'bin/gradle' ]
