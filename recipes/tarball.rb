@@ -1,9 +1,9 @@
 #
-# Author:: Michael S. Klishin (<michaelklishin@me.com>)
+# Author:: Denis Karpenko (<denis@karpenko.me>)
 # Cookbook Name:: gradle
 # Recipe:: tarball
 #
-# Copyright 2012, Michael S. Klishin.
+# Copyright 2012, Denis Karpenko.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,41 +18,15 @@
 # limitations under the License.
 #
 
-include_recipe "java"
+include_recipe 'install_from'
 
-package "groovy" do
-  action :install
-end
-
-package "unzip" do
-  action :install
-end
-
-# 1. Download the tarball to /tmp
-require "tmpdir"
-
-td          = Dir.tmpdir
-tmp         = File.join(td, "gradle-#{node.gradle.version}-bin.zip")
-tarball_dir = File.join(td, "gradle-#{node.gradle.version}")
-
-
-remote_file(tmp) do
-  source node.gradle.tarball.url
-
-  not_if "which gradle"
-end
-
-bash "extract #{tmp}, move it to #{node.gradle.installation_dir}" do
-  user "root"
-  cwd  "/tmp"
-
-  code <<-EOS
-    unzip #{tmp}
-    rm -rf #{node.gradle.installation_dir}
-    mv --force #{tarball_dir} #{node.gradle.installation_dir}
-  EOS
-
-  creates "#{node.gradle.installation_dir}/bin/gradle"
+install_from_release(:gradle) do
+  release_url   node[:gradle][:release_url]
+  home_dir      node[:gradle][:home_dir]
+  version       node[:gradle][:version]
+  action        [:install]
+  has_binaries  [ 'bin/gradle' ]
+  not_if{ ::File.exists?("#{node[:gradle][:install_dir]}/bin/gradle") }
 end
 
 
