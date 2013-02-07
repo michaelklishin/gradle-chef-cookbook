@@ -1,8 +1,10 @@
 #
-# Author:: Denis Karpenko (<denis@karpenko.me>)
-# Cookbook Name:: gradle
-# Recipe:: tarball
+# Original Author: Michael Klishin (<michael@defprotocol.org>)
+# Author: Denis Karpenko (<denis@karpenko.me>)
+# Cookbook Name: gradle
+# Recipe: tarball
 #
+# Copyright 2012, Michael S. Klishin.
 # Copyright 2012, Denis Karpenko.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
