@@ -17,7 +17,7 @@ Main recipe is `gradle::tarball`.
 
 ## Attributes
 
-* `[:gradle][:version]` (default: `1.4`): Gradle version to install
+* `[:gradle][:version]` (default: `1.5`): Gradle version to install
 * `[:gradle][:home_dir]` (default: `/usr/local/gradle`): directory to install Gradle to
 
 
@@ -34,6 +34,6 @@ Tested and used with OpenJDK 7, Oracle JDK 7, OpenJDK 6 and Sun JDK.
 
 ## Copyright & License
 
-Michael S. Klishin, 2012.
+Michael S. Klishin, 2012-2013.
 
 Released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
