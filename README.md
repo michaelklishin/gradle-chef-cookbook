@@ -37,3 +37,7 @@ Tested and used with OpenJDK 7, Oracle JDK 7, OpenJDK 6 and Sun JDK.
 Michael S. Klishin, 2012-2013.
 
 Released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/michaelklishin/gradle-chef-cookbook/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
