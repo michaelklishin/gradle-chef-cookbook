@@ -38,6 +38,3 @@ Michael S. Klishin, 2012-2015.
 
 Released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/michaelklishin/gradle-chef-cookbook/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
