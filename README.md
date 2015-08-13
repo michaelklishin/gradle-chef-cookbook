@@ -17,24 +17,24 @@ Main recipe is `gradle::tarball`.
 
 ## Attributes
 
-* `[:gradle][:version]` (default: `1.10`): Gradle version to install
+* `[:gradle][:version]` (default: `2.6`): Gradle version to install
 * `[:gradle][:home_dir]` (default: `/usr/local/gradle`): directory to install Gradle to
 
 
 ## Supported OSes
 
-Debian and Ubuntu (any version that was released in the last 1-2 years and provides Groovy package
+Debian and Ubuntu (any version that was released in the last few years and provides Groovy package
 should work fine).
 
 
 ## Dependencies
 
-Tested and used with OpenJDK 7, Oracle JDK 7, OpenJDK 6 and Sun JDK.
+Tested and used with OpenJDK 8, Oracle JDK 8, OpenJDK 7K.
 
 
 ## Copyright & License
 
-Michael S. Klishin, 2012-2014.
+Michael S. Klishin, 2012-2015.
 
 Released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
 
