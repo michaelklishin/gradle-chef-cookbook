@@ -26,7 +26,8 @@ ark node[:gradle][:name] do
    url          node[:gradle][:release_url]
    version      node[:gradle][:version]
    prefix_home  node[:gradle][:home_dir]
-   prefix_bin   'bin/gradle'
+   prefix_root  node[:gradle][:home_dir]
+   prefix_bin   "#{node[:gradle][:home_dir]}/bin"
    action       :install
  end
 
