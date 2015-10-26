@@ -22,7 +22,7 @@
 
 include_recipe 'ark'
 
-ark ode[:gradle][:name] do
+ark node[:gradle][:name] do
    url          node[:gradle][:release_url]
    version      node[:gradle][:version]
    prefix_home  node[:gradle][:home_dir]
