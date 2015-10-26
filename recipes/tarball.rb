@@ -20,17 +20,16 @@
 # limitations under the License.
 #
 
-include_recipe 'install_from'
+include_recipe 'ark'
 
-install_from_release(:gradle) do
-  release_url   node[:gradle][:release_url]
-  home_dir      node[:gradle][:home_dir]
-  version       node[:gradle][:version]
-  action        [:install]
-  has_binaries  [ 'bin/gradle' ]
-  not_if{ ::File.exists?("#{node[:gradle][:install_dir]}/bin/gradle") }
-end
-
+ark node[:gradle][:name] do
+   url          node[:gradle][:release_url]
+   version      node[:gradle][:version]
+   prefix_home  node[:gradle][:home_dir]
+   prefix_root  node[:gradle][:home_dir]
+   prefix_bin   "#{node[:gradle][:home_dir]}/bin"
+   action       :install
+ end
 
 cookbook_file "/etc/profile.d/gradle.sh" do
   owner "root"

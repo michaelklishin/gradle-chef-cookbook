@@ -10,7 +10,7 @@
     "ubuntu": ">= 0.0.0"
   },
   "dependencies": {
-    "install_from": ">= 0.0.0"
+    "ark": ">= 0.0.0"
   },
   "recommendations": {
   },
