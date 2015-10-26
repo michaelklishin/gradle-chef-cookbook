@@ -22,13 +22,12 @@
 
 include_recipe 'ark'
 
-ark "gradle" do
+ark ode[:gradle][:name] do
    url          node[:gradle][:release_url]
    version      node[:gradle][:version]
    prefix_home  node[:gradle][:home_dir]
    prefix_bin   [ 'bin/gradle' ]
-   action       [:install]
-   not_if{ ::File.exists?("#{node[:gradle][:install_dir]}/bin/gradle") }
+   action       :install
  end
 
 cookbook_file "/etc/profile.d/gradle.sh" do
