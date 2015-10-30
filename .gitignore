@@ -1,4 +1,22 @@
 *~
-#~
-.rbx
-*.class
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+pkg/
+
+# Berkshelf
+.vagrant
+/cookbooks
+Berksfile.lock
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+.berkshelf
+.chef
+.kitchen/
+.kitchen.local.yml
