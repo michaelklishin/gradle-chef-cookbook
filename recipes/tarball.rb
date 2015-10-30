@@ -22,8 +22,10 @@
 
 include_recipe 'ark'
 
+release_url = "#{node['gradle']['release_url_prefix']}#{node['gradle']['version']}#{node['gradle']['release_url_suffix']}"
+
 ark node['gradle']['name'] do
-  url node['gradle']['release_url']
+  url release_url
   version node['gradle']['version']
   prefix_home node['gradle']['home_dir']
   prefix_root node['gradle']['home_dir']

@@ -1,0 +1,25 @@
+---
+
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: latest
+
+platforms:
+  - name: centos-7.0
+    driver:
+      box: opscode-centos-7.0
+      box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-7.0_chef-provisionerless.box
+
+suites:
+  - name: default
+    run_list:
+      - recipe[gradle::tarball]
+  - name: override
+    run_list:
+      - recipe[gradle::tarball]
+    attributes:
+      gradle:
+        version: '2.6'
