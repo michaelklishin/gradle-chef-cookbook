@@ -22,19 +22,20 @@
 
 include_recipe 'ark'
 
-ark node[:gradle][:name] do
-   url          node[:gradle][:release_url]
-   version      node[:gradle][:version]
-   prefix_home  node[:gradle][:home_dir]
-   prefix_root  node[:gradle][:home_dir]
-   prefix_bin   "#{node[:gradle][:home_dir]}/bin"
-   action       :install
- end
+release_url = "#{node['gradle']['release_url_prefix']}#{node['gradle']['version']}#{node['gradle']['release_url_suffix']}"
 
-cookbook_file "/etc/profile.d/gradle.sh" do
-  owner "root"
-  group "root"
+ark node['gradle']['name'] do
+  url release_url
+  version node['gradle']['version']
+  prefix_home node['gradle']['home_dir']
+  prefix_root node['gradle']['home_dir']
+  prefix_bin "#{node['gradle']['home_dir']}/bin"
+  action :install
+end
+
+cookbook_file '/etc/profile.d/gradle.sh' do
+  owner 'root'
+  group 'root'
   mode 0644
-
-  source "etc/profile.d/gradle.sh"
+  source 'etc/profile.d/gradle.sh'
 end
