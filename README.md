@@ -34,7 +34,7 @@ Tested and used with OpenJDK 8, Oracle JDK 8, OpenJDK 7K.
 
 ## Copyright & License
 
-Michael S. Klishin, 2012-2015.
+Michael S. Klishin, 2012-2016.
 
 Released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
 
